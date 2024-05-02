@@ -14,7 +14,8 @@ class llama3():
                                             model_name,
                                             # load_in_4bit = True,
                                             # low_cpu_mem_usage=True,
-                                            torch_dtype="auto",
+                                            # torch_dtype="auto",
+                                            torch_dtype=torch.float16,
                                             # torch_dtype=torch.bfloat16,
                                             device_map='auto',
                                             # device_map='balanced', # When passing device_map as a string, the value needs to be a device name (e.g. cpu, cuda:0) or 'auto', 'balanced', 'balanced_low_0', 'sequential'
@@ -22,6 +23,60 @@ class llama3():
         return model, tokenizer
     
     # def llama3_summary(self, comments, verbose = False):
+    def llama3_eng_translator(self, statement, verbose = False):
+        messages = [
+            {
+                "role": "system",
+                "content": """You are a helpful assistant who translates the text given by user from any language to English. \
+                    Text given by user starts after <<TEXT>>.""" 
+
+            },
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": "\n" + "<<TEXT>> " + statement + "\n"
+                    }
+                ]
+            }
+        ]
+        
+        input_ids = self.tokenizer.apply_chat_template(
+                                messages, 
+                                add_generation_prompt=True,
+                                return_tensors="pt",
+                                verbose=True
+                        ).to(self.model.device)
+
+
+        terminators = [
+                        self.tokenizer.eos_token_id,
+                        self.tokenizer.convert_tokens_to_ids("<|eot_id|>")
+                        ]
+        
+        if verbose:
+            print("\n --- Generating outputs --- \n")
+        
+        outputs = self.model.generate(
+                                input_ids,
+                                max_new_tokens=512,
+                                eos_token_id=terminators,
+                                do_sample=False,
+                                temperature=0.2,
+                                top_p=0.3,
+                                top_k=20,
+                                )
+        if verbose:                    
+            print("\n --- Got some response --- \n ")
+
+        response = outputs[0][input_ids.shape[-1]:]
+
+        if verbose:
+            print("\n --- Returning after decoding response... --- \n")
+
+        return self.tokenizer.decode(response, skip_special_tokens=True)
+    
     def llama3_summary(self, statement, context = "", verbose = False):
 
         # text = '\n'.join([f"Author: {c['author']}\nDate: {c['datetime']}\n{c['text']}" for c in comments])
@@ -105,12 +160,12 @@ class llama3():
         
         outputs = self.model.generate(
                                 input_ids,
-                                max_new_tokens=128,
+                                max_new_tokens=64,
                                 eos_token_id=terminators,
                                 do_sample=True,
                                 temperature=0.2,
-                                top_p=0.5,
-                                top_k=35
+                                top_p=0.3,
+                                top_k=20,
                                 )
         if verbose:                    
             print("\n --- Got some response --- \n ")
