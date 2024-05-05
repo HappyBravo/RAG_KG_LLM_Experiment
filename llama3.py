@@ -22,6 +22,40 @@ class llama3():
                                             )
         return model, tokenizer
     
+    def clean_output(self, llama_response):
+        possible_response = ["true", "false", "pantsonfire"]
+        llama_response = llama_response.lower()
+        llama_responses = [s.strip() for s in llama_response.split()]
+        if len(llama_responses) > 4 \
+                            and \
+                            sum([llama_responses.count(resp) for resp in possible_response]) <= 1:
+            # MAKE SURE THAT THE RESPONSE DOES NOT CONTAIN GARBAGE
+            # AND "TRUE", "FALSE" AND "PANTSONFIRE" ANY OF THEM APPEARS ONLY ONCE 
+            return None
+        if "true" in llama_responses:
+            return 1
+        elif "false" in llama_responses:
+            return 0
+        elif "pantsonfire" in llama_responses:
+            return -1
+        else:
+            return None
+        
+    def calc_truth(self, truth_dict):
+        total_count = len(truth_dict)
+        
+        frac_1 = sum(1 for value in truth_dict.values() if value == 1)/total_count if total_count > 0 else 0
+        frac_0 = sum(1 for value in truth_dict.values() if value == 0)/total_count if total_count > 0 else 0
+        frac_minus_1 = sum(1 for value in truth_dict.values() if value == -1)/total_count if total_count > 0 else 0
+
+        return {
+            "True" : frac_1,
+            "False" : frac_0,
+            "PantsOnFire" : frac_minus_1
+        }
+
+
+
     # def llama3_summary(self, comments, verbose = False):
     def llama3_eng_translator(self, statement, verbose = False):
         messages = [
