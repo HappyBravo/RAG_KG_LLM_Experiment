@@ -34,10 +34,18 @@ class RAG():
         self.device = device
 
         self.vector_store = None
+        
+        self.model_kwargs = {'device': self.device}
 
+        self.encode_kwargs = {'normalize_embeddings': False}
+        self.embeddings = HuggingFaceEmbeddings(
+                                            model_name=self.vector_model_name, 
+                                            model_kwargs=self.model_kwargs, 
+                                            encode_kwargs=self.encode_kwargs 
+                                            )
         # pass 
 
-    def get_docs(self, useOnlineWiki = False, verbose = False):
+    def get_wiki_docs(self, useOnlineWiki = False, verbose = False):
         entities_in_kb = self.kb.entities
         doc_titles = []
         docs = {}
@@ -62,40 +70,41 @@ class RAG():
                 print(f"---{_url_word} removed")
             # --- NEED TO FIX THIS ---
         self.docs = docs 
-        self.data = "".join([f"{_content}\n\n" for _word, _content in docs.items()])
+        data = "".join([f"{_content}\n\n" for _word, _content in docs.items()])
+        self.data = data
         
         if verbose or self.verbose:
             print(docs)
-        return docs
+        return docs, data
     
-    def split_data_to_chunks(self, data = None):
+    def split_data_to_chunks(self, data = None, self_chunks = False):
         if not data:
             data = self.data
+            self_chunks = True
+
         chunks = self.text_splitter.split_text(data)
-        self.chunks = chunks
+        if self_chunks:
+            self.chunks = chunks
+        
         return chunks
     
-    def store_vector(self, chunks = None):
-        # MAKING TEXT EMBEDDING (VECTORIZING CHUNKS)
-        # modelPath = "sentence-transformers/all-MiniLM-l6-v2"
-        # model_kwargs = {'device': 'cpu'}
-        model_kwargs = {'device': self.device}
-
-        encode_kwargs = {'normalize_embeddings': False}
-        embeddings = HuggingFaceEmbeddings(
-                                            model_name=self.vector_model_name, 
-                                            model_kwargs=model_kwargs, 
-                                            encode_kwargs=encode_kwargs 
-                                            )
+    def store_vector(self, chunks = None, self_db = None):
+        if self_db is None:
+            self_db = False
+        
         if not chunks : 
             chunks = self.chunks
+            self_db = True
         # print(chunks)
-        vector_store = FAISS.from_texts(chunks, embedding=embeddings)
-        self.vector_store = vector_store
+        vector_store = FAISS.from_texts(chunks, embedding=self.embeddings)
+        if self_db:
+            self.vector_store = vector_store
         return vector_store
     
-    def get_similar(self, user_qn = "", k = 5):
+    def get_similar(self, user_qn = "", k = 5, vector_store = None):
         if not user_qn :
             user_qn = self.user_qn
-        return self.vector_store.similarity_search(user_qn, k = k)
+        if not vector_store:
+            vector_store = self.vector_store
+        return vector_store.similarity_search(user_qn, k = k)
         

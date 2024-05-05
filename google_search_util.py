@@ -52,10 +52,12 @@ class GoogleUtil():
 
     def fetch_articles(self, url_to_search): # FETCH THE CONTENT FROM THE WEBPAGE
         try:
-            # headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36'}
+            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36'}
 
-            response = requests.get(url_to_search, timeout=30,
-                                    # headers=headers,
+            response = requests.get(url_to_search, 
+                                    timeout=30,
+                                    # timeout=10, # IF WE HAVE DECENT NET SPEED
+                                    headers=headers,
                                     )
             if response.status_code == 200:
                 soup = BeautifulSoup(response.content, 'html.parser')
@@ -70,10 +72,10 @@ class GoogleUtil():
             return None
         
         
-    def _search_google_news(self, query,                   # QUERY / KEYWORDS TO SEARCH
+    def _search_google_news(self, query,             # QUERY / KEYWORDS TO SEARCH
                             number_of_results = 5,   # NUMBER OF ARTICLES / NEWS TO FETCH
-                            period = "7d",
-                            useGoogle = False):          # PAST DAYS
+                            period = "7d",           # PAST DAYS
+                            useGoogle = True):          
         news_urls = []
         googlenews = GoogleNews()
         
@@ -101,13 +103,13 @@ class GoogleUtil():
         googlenews.clear()
         return news_urls
     
-    def search_google_news(self, query, number_of_results = 5, period = "7d", englishOnly = True, useGoogle = False):
+    def search_google_news(self, query, number_of_results = 5, period = "7d", englishOnly = True, useGoogle = True):
         news_links = self._search_google_news(query=query, 
                                               number_of_results=number_of_results, 
                                               period=period,
                                               useGoogle=useGoogle)
         news_links = list(map(self.clean_links, news_links))
-        print(news_links)
+        # print(news_links)
 
         google_news_data = {}
 
@@ -150,21 +152,41 @@ class GoogleUtil():
                     print("Error translating. Error:", e)
                     searched_data_dict[key] = "" # ENGLISH ONLY !
         return searched_data_dict
+    
+    def fetch_data_from_relation(self, relations=[], number_of_results = 5, 
+                                 useGoogleForNews = True):
+        search_dict = {}
+        news_dict = {}
+        searched = []
+        for _relation in relations:
+            ent1, ent2 = _relation
+            search_space = [f'"{ent1}"', f'"{ent2}"', f'"{ent1} {ent2}"']
+            for _ele in search_space:
+                if _ele in searched:
+                    continue
+                print(f"Searching for {_ele}...")
+                searched.append(_ele)
+                search_dict.update(self.search_google(_ele, number_of_results = number_of_results))
+                news_dict.update(self.search_google_news(_ele, number_of_results=number_of_results, useGoogle=useGoogleForNews))
+                # print(" "*(5 + len(_ele)), end = "\r")
+            print()
+        return search_dict, news_dict
 
 if __name__ == "__main__":
     query = "West Bengal election sun"
+    n = 10
 
     googleBaba = GoogleUtil()
 
-    search_data = googleBaba.search_google(query)
+    search_data = googleBaba.search_google(query, number_of_results= n)
     for i in search_data:
         print(">>> ", i)
         print(search_data[i])
     print()
     print("-----")
     print()
-    news_data = googleBaba.search_google_news(query, useGoogle=True)
+    news_data = googleBaba.search_google_news(query, number_of_results=n, useGoogle=True)
     for i in news_data:
         print(">>> ", i)
         print(news_data[i])
-    print()
+    print("len(news_data)", len(news_data))

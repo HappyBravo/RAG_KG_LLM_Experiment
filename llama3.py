@@ -25,18 +25,18 @@ class llama3():
     def clean_output(self, llama_response):
         possible_response = ["true", "false", "pantsonfire"]
         llama_response = llama_response.lower()
-        llama_responses = [s.strip() for s in llama_response.split()]
-        if len(llama_responses) > 4 \
+        elements_llama_responses = [s.strip() for s in llama_response.split()]
+        if len(elements_llama_responses) > 4 \
                             and \
-                            sum([llama_responses.count(resp) for resp in possible_response]) <= 1:
+                            sum([elements_llama_responses.count(resp) for resp in possible_response]) <= 1:
             # MAKE SURE THAT THE RESPONSE DOES NOT CONTAIN GARBAGE
             # AND "TRUE", "FALSE" AND "PANTSONFIRE" ANY OF THEM APPEARS ONLY ONCE 
             return None
-        if "true" in llama_responses:
+        if "true" in llama_response:
             return 1
-        elif "false" in llama_responses:
+        elif "false" in llama_response:
             return 0
-        elif "pantsonfire" in llama_responses:
+        elif "pantsonfire" in llama_response:
             return -1
         else:
             return None
