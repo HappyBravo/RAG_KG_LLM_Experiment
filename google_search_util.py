@@ -31,6 +31,7 @@ class GoogleUtil():
     
     def search_google(self, query, number_of_results = 5, englishOnly = True):
         search_results = self._search_google(query=query, number_of_results=number_of_results)
+        search_results = [i for i in search_results if not i.endswith(".pdf")]
         google_search_data = {}
 
         for url in search_results:
@@ -74,7 +75,7 @@ class GoogleUtil():
         
     def _search_google_news(self, query,             # QUERY / KEYWORDS TO SEARCH
                             number_of_results = 5,   # NUMBER OF ARTICLES / NEWS TO FETCH
-                            period = "7d",           # PAST DAYS
+                            period = "",           # PAST DAYS
                             useGoogle = True):          
         news_urls = []
         googlenews = GoogleNews()
@@ -103,12 +104,14 @@ class GoogleUtil():
         googlenews.clear()
         return news_urls
     
-    def search_google_news(self, query, number_of_results = 5, period = "7d", englishOnly = True, useGoogle = True):
+    def search_google_news(self, query, number_of_results = 5, period = "", englishOnly = True, useGoogle = True):
         news_links = self._search_google_news(query=query, 
                                               number_of_results=number_of_results, 
                                               period=period,
                                               useGoogle=useGoogle)
         news_links = list(map(self.clean_links, news_links))
+        news_links = [i for i in news_links if not i.endswith(".pdf")]
+
         # print(news_links)
 
         google_news_data = {}

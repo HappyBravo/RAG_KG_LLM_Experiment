@@ -4,7 +4,7 @@ from nltk.tokenize import word_tokenize
 import wikipedia
 from fuzzywuzzy import fuzz
 from joblib import Parallel, delayed 
-import pickle, os
+import pickle, os, random
 from pyvis.network import Network
 import networkx as nx
 
@@ -82,15 +82,34 @@ class KB():
                             print(f"Got {entity_data} from offline wiki with similarity ration = {ratioo}.")
             
             if useWiki and not entity_data:
-                if verbose:
-                    print(f"Finding {candidate_entity} in online Wiki")
-                page = wikipedia.page(candidate_entity, auto_suggest=False)
+                # if verbose:
+                print(f"Finding {candidate_entity} in online Wiki")
+                page = wikipedia.page(candidate_entity, 
+                                        auto_suggest=False, 
+                                        redirect=False,
+                                        )
+                # if page.exists():
                 entity_data = {
                     "title": page.title,
                     "url": page.url,
                     "summary": page.summary
-                }
-            
+                    }
+                # else:
+                    # return 
+                # except wikipedia.DisambiguationError as e:
+                    # s = random.choice(e.options)
+                    # page = wikipedia.page(s, auto_suggest= False)
+                    # entity_data = {
+                    #     "title": page.title,
+                    #     "url": page.url,
+                    #     "summary": page.summary
+                    # }
+                    # print("DisambiguationError")
+                    # return None
+                # except Exception as e:
+                #     print(f"Error retriving Online Wikipedia. Error - {e}")
+                #     entity_data = None
+                #     return 
             return entity_data
         except:
             return None
@@ -111,7 +130,7 @@ class KB():
         entities = []
         if useWiki:
             entities = Parallel(n_jobs=N_JOB_COUNT)(delayed(self.get_wikipedia_data)(ent, useWiki, offlineWiki, verbose=verbose) for ent in candidate_entities)
-            # entities = [self.get_wikipedia_data(ent, useWiki, offlineWiki) for ent in candidate_entities]
+            # entities = [self.get_wikipedia_data(ent, useWiki, offlineWiki, verbose=verbose) for ent in candidate_entities]
 
         else:
             entities = [{"title": ent,

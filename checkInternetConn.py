@@ -1,6 +1,8 @@
 # Test if an internet connection is present
 import socket
-REMOTE_SERVER = "one.one.one.one"
+# REMOTE_SERVER = "one.one.one.one"
+REMOTE_SERVER = "1.1.1.1"
+
 TIME_OUT = 30
 
 def is_connected(hostname = REMOTE_SERVER, time_out = TIME_OUT):

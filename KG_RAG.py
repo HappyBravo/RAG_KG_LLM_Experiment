@@ -1,5 +1,6 @@
 # IMPORT
 import os, json, pickle, re, math, torch, multiprocessing, nltk, time
+from datetime import datetime
 from tqdm import tqdm
 import numpy as np
 
@@ -29,6 +30,12 @@ from google_search_util import GoogleUtil
 from llama3 import llama3
 
 from checkInternetConn import is_connected
+
+from mylogger import Logger
+
+log_folder = "./Logs/"
+log_filename = log_folder + f"log_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+logger = Logger(log_file=log_filename)
 
 
 # FOR GPU
@@ -147,7 +154,7 @@ if __name__ == "__main__":
     
     # print("Testing KB and NER ... ")
 
-    statement = "The Sun rises in East direction. The Earth is smaller than the planet Jupiter. Tigers are from Cat family."
+    # statement = "The Sun rises in East direction. The Earth is smaller than the planet Jupiter. Tigers are from Cat family."
     # print("Statement -", statement)
 
     #######################################################
@@ -194,16 +201,40 @@ if __name__ == "__main__":
     ##################################################################
     # TAKEN FROM FACTCHECK.ORG- CURRENTLY ONE OF THE RECENT FAKE INFORAMATION
     # LABEL - FAKE
-    testing_texts = """BREAKING A review in the international Journal of Biological Macromolecules has found that COVID-19 mRNA vaccines could aid cancer development."""
-    # {0: 1, 1: -1, 2: 1, 3: 1}
-    # {'True': 0.75, 'False': 0.0, 'PantsOnFire': 0.25}
+    # testing_texts = """BREAKING A review in the international Journal of Biological Macromolecules has found that COVID-19 mRNA vaccines could aid cancer development."""
+    # {0: -1, 1: 1, 2: -1, 3: 1, 4: 1}
+    # {'True': 0.6, 'False': 0.0, 'PantsOnFire': 0.4}
 
-    testing_texts = """Confirmed: Researchers Reveal COVID mRNA Vaccines Contain Component that Suppresses Immune Response and Stimulates Cancer Growth."""
+    # testing_texts = """Confirmed: Researchers Reveal COVID mRNA Vaccines Contain Component that Suppresses Immune Response and Stimulates Cancer Growth."""
+    # {0: -1, 1: -1, 2: 0, 3: -1}
+    # {'True': 0.0, 'False': 0.25, 'PantsOnFire': 0.75}
 
     # testing_texts = """study … confirms what some medical experts have been suspecting for 18 months: The COVID mRNA shots containing N1-methyl-pseudouridine SUPPRESS the immune system and STIMULATE cancer growth!"""
+    # {0: -1, 1: -1, 2: -1, 3: 1, 4: -1, 5: -1}
+    # {'True': 0.16666666666666666, 'False': 0.0, 'PantsOnFire': 0.8333333333333334}
+
+    # statement = testing_texts
+    # SMALL SENTECES -> NER DOES NOT WORK CORRECTLY
+    ##################################################################
+    ##################################################################
+    # TAKEN FROM train.json "https://github.com/MichSchli/AVeriTeC/blob/main/data/train.json"
+    # LABEL - TRUE
+    # testing_texts = "President Muhammadu Buhari sign a new Police bill to allow officers arrest without a warrant."
+
+    # {0: 0, 1: -1, 2: 1}
+    # {'True': 0.3333333333333333, 'False': 0.3333333333333333, 'PantsOnFire': 0.3333333333333333}
+
+    # LABEL = TRUE
+    # testing_texts = "Joe Biden voted for the Iraq War and he supported wars in Serbia, Syria, and Libya."
+    # {0: 1, 1: 1, 2: 1}
+    # {'True': 1.0, 'False': 0.0, 'PantsOnFire': 0.0}
+
+    # LABEL = FALSE
+    testing_texts = "We actually saw revenues to the Treasury increase after we lowered taxes in 2017. Rest assured the Democrats do not want you to know that."
+    # {0: 1, 1: -1, 2: 1, 3: -1, 4: -1}
+    # {'True': 0.4, 'False': 0.0, 'PantsOnFire': 0.6}
 
     statement = testing_texts
-    # SMALL SENTECES -> NER DOES NOT WORK CORRECTLY
     ##################################################################
 
     use_Google = 1
@@ -259,7 +290,8 @@ if __name__ == "__main__":
         search_dict = {}
         news_dict = {}
 
-        relations = [sorted((relation['head'], relation['tail'])) for relation in kb.relations if relation['head'] != relation['tail']]
+        relations = [sorted((relation['head'], relation['tail'])) for relation in kb.relations if ((relation['head'] != relation['tail']) 
+                                                                                                   or ('time' in relation['type'].lower()))]
         relations.sort()
         relations = list(set(map(tuple, relations)))
 
@@ -338,7 +370,7 @@ if __name__ == "__main__":
             if trying_with_google:
                 break
 
-            if sentence_truth[sent_no] is not 1:
+            if sentence_truth[sent_no] not in [0, 1]:
                 # CHECK GOOGLE
                 print("Lets try with Google Search and Google News data...")
                 trying_with_google = True

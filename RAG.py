@@ -8,7 +8,7 @@ from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import FAISS
 
 class RAG():
-    def __init__(self, user_qn, kb = None, offline_wikipedia = None, useOnlineWiki = False, 
+    def __init__(self, user_qn = "", kb = None, offline_wikipedia = None, useOnlineWiki = False, 
                  chunk_size = 300, chunk_overlap = 50, 
                  vector_model_name = None, device = None,
                  verbose = False):
@@ -45,8 +45,11 @@ class RAG():
                                             )
         # pass 
 
-    def get_wiki_docs(self, useOnlineWiki = False, verbose = False):
-        entities_in_kb = self.kb.entities
+    def get_wiki_docs(self, entities = {}, useOnlineWiki = False, verbose = False):
+        entities_in_kb = entities
+        if not entities_in_kb:
+            entities_in_kb = self.kb.entities
+        
         doc_titles = []
         docs = {}
         for _entt, _values in entities_in_kb.items():
