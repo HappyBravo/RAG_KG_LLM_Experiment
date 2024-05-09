@@ -177,7 +177,9 @@ if __name__ == "__main__":
     # --------------------------------------------------------------------------
     # --------------------------------------------------------------------------
 
-    testing_file = "./benchmark/averitec_claims.csv"
+    # testing_file = "./data/averitec_claims.csv"
+    testing_file = "./data/politifact_claims.csv"
+    # testing_file = "./data/snopes_claims.csv"
     
     assert os.path.exists(testing_file)
 
@@ -187,8 +189,11 @@ if __name__ == "__main__":
     
     logger.log(f"'{testing_file}' loaded...")
     
-    n_claims_start = 13
-    n_claims_end = 20
+    # n_claims_start = 13
+    # n_claims_end = 20
+
+    n_claims_start = int(input("Enter starting : "))
+    n_claims_end = int(input(f"Enter ending (after {n_claims_start + 1} and under {len(claim_label_tuples)}) : "))
 
     resulting_file = f"./results/result_{time_during_start}.csv"
     with open(resulting_file, "a") as result_f:
@@ -225,11 +230,15 @@ if __name__ == "__main__":
         for text in texts:
             print(f"Doing NER of - '{text}'")
             logger.log(f"Doing NER of - '{text}'")
+            text = text.replace("-", " ")   # "-" IS CAUSING ISSUE IN NER ... 
+                                            # EXAMPLE: IN "COVID-19"
+            
             kb = ner.from_text_to_kb(text, "", kb = kb,
                                 verbose=0,
                                 span_length=spann,
                                 max_doc_text=max_lenn,
-                                useWiki=0,
+                                useWiki=1,
+                                # offline_only = 1,
                                 offlineWiki=offline_wikipedia)
         kb.print()
         
@@ -278,7 +287,16 @@ if __name__ == "__main__":
             
             n = max(math.ceil(len(relations)*0.25), 2)
             
-            fetched_data = Parallel(n_jobs=N_JOB_COUNT)(delayed(googleBaba.fetch_data_from_relation)(relations=_relations) for _relations in [relations[i:i+n] for i in range(0, len(relations), n)])
+            try :
+                fetched_data = Parallel(n_jobs=N_JOB_COUNT, timeout=600)(
+                                        delayed(
+                                            googleBaba.fetch_data_from_relation)(relations=_relations) 
+                                                                    for _relations in [relations[i:i+n] 
+                                                                                        for i in range(0, len(relations), n)])
+            except Exception as e:
+                print(f"An error occurred while fetching data from Google : {e}")
+                logger.log(f"An error occurred while fetching data from Google : {e}")
+                fetched_data = []
 
             # print(fetched_data)
             # input("Press ENTER key to continue...")

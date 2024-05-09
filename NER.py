@@ -88,7 +88,8 @@ class NER():
                         article_publish_date=None, 
                         verbose=False,
                         useWiki=True,
-                        offline_Wiki = None):
+                        offline_Wiki = None,
+                        offline_only = False):
         
         # tokenize whole text
         # print(text)
@@ -179,7 +180,8 @@ class NER():
                                     article_publish_date, 
                                     useWiki=useWiki,
                                     offlineWiki=offline_Wiki,
-                                    verbose=verbose)
+                                    verbose=verbose,
+                                    offline_only = offline_only)
                 i += 1
 
         return kb
@@ -194,7 +196,8 @@ class NER():
                         max_token = 1000,
                         max_doc_text = 1000,
                         useWiki = True,
-                        offlineWiki = None):
+                        offlineWiki = None,
+                        offline_only = False):
         # with torch.no_grad():
         #     # tokenize whole text
         #     # inputs = tokenizer([text], return_tensors="pt")
@@ -237,7 +240,8 @@ class NER():
                                     verbose=verbose,
                                     kb=_kb,
                                     useWiki=useWiki,
-                                    offline_Wiki=_offlineWiki)
+                                    offline_Wiki=_offlineWiki,
+                                    offline_only=offline_only)
         return _kb
 
 

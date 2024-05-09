@@ -64,7 +64,7 @@ class RAG():
                     pass
                 continue
 
-            # print(offline_wikipedia.word_match(_url_word, verbose=0, summaryOnly=False))
+            # print(self.offline_wikipedia.word_match(_url_word, verbose=0, summaryOnly=False))
             docs[_url_word] = self.offline_wikipedia.word_match(_url_word, verbose=0, summaryOnly=False)
             if docs[_url_word]:
                 docs[_url_word] = docs[_url_word]["summary"]

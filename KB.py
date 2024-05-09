@@ -48,7 +48,7 @@ class KB():
             r1["meta"][article_url]["spans"] += spans_to_add
             
 
-    def get_wikipedia_data(self, candidate_entity, useWiki = True, offline_wiki = None, verbose = False):
+    def get_wikipedia_data(self, candidate_entity, useWiki = True, offline_wiki = None, offline_only = False, verbose = False, redirect_count = 0):
         # print("\n\n--- offline", offline_Wiki)
         entity_data = None
         stop_words = set(stopwords.words('english'))
@@ -70,8 +70,9 @@ class KB():
                     _word = _entity_data["url"].split("/wiki/")[-1].strip()
                     if verbose:
                         print(f"REDIRECT found !!! Candidate entitiy {candidate_entity} === changed to ==> {_word}")
-
-                    entity_data = self.get_wikipedia_data(_word, useWiki=useWiki, offline_wiki=offline_wiki, verbose=verbose)
+                    if redirect_count > 5:
+                        return None
+                    entity_data = self.get_wikipedia_data(_word, useWiki=useWiki, offline_wiki=offline_wiki, offline_only=offline_only, verbose=verbose, redirect_count=redirect_count+1)
                 else:                    
                     ratioo = fuzz.ratio(candidate_entity, _entity_data['title'])
                     if verbose:
@@ -81,7 +82,7 @@ class KB():
                         if verbose:
                             print(f"Got {entity_data} from offline wiki with similarity ration = {ratioo}.")
             
-            if useWiki and not entity_data:
+            if useWiki and not entity_data and not offline_only:
                 # if verbose:
                 print(f"Finding {candidate_entity} in online Wiki")
                 page = wikipedia.page(candidate_entity, 
@@ -118,7 +119,7 @@ class KB():
         self.entities[e["title"]] = {k:v for k,v in e.items() if k != "title"}
 
     def add_relation(self, r, article_title, article_publish_date, 
-                     useWiki = True, offlineWiki = None, verbose = False):
+                     useWiki = True, offlineWiki = None, offline_only = False, verbose = False):
         # check on wikipedia
         candidate_entities = [r["head"], r["tail"]]
         if verbose:
@@ -129,9 +130,12 @@ class KB():
         # TRY 2
         entities = []
         if useWiki:
-            entities = Parallel(n_jobs=N_JOB_COUNT)(delayed(self.get_wikipedia_data)(ent, useWiki, offlineWiki, verbose=verbose) for ent in candidate_entities)
-            # entities = [self.get_wikipedia_data(ent, useWiki, offlineWiki, verbose=verbose) for ent in candidate_entities]
-
+            try : 
+                entities = Parallel(n_jobs=N_JOB_COUNT, timeout=300)(delayed(self.get_wikipedia_data)(ent, useWiki, offlineWiki, offline_only, verbose=verbose) for ent in candidate_entities)
+                # entities = [self.get_wikipedia_data(ent, useWiki, offlineWiki, verbose=verbose) for ent in candidate_entities]
+            except:
+                print(f"An error occurred while fetching entities data from Wiki : {e}")
+                entities = None
         else:
             entities = [{"title": ent,
                          "url": "",
