@@ -1,0 +1,1325 @@
+[
+   {
+      "Claim": "Hunter Biden had no experience in Ukraine or in the energy sector when he joined the board of Burisma.",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.3333333333333333,
+         "False": 0.3333333333333333,
+         "PantsOnFire": 0.3333333333333333
+      }
+   },
+   {
+      "Claim": "In Nigeria \u00ef\u00bf\u00bd in terms of revenue share, 20% goes to the local government.",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.3333333333333333,
+         "PantsOnFire": 0.6666666666666666
+      }
+   },
+   {
+      "Claim": "Biden has pledged to stop border wall construction and give amnesty and health care to all illegal immigrants.",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.5,
+         "False": 0.0,
+         "PantsOnFire": 0.5
+      }
+   },
+   {
+      "Claim": "After the police shooting of Jacob Blake, Gov. Tony Evers & Lt. Gov. Mandela Barnes did not call for peace or encourage calm.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.3333333333333333,
+         "False": 0.0,
+         "PantsOnFire": 0.3333333333333333
+      }
+   },
+   {
+      "Claim": "The Common Law Admission Test (CLAT) 2020 will not be conducted on September 7, 2020, as planned",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.3333333333333333,
+         "PantsOnFire": 0.6666666666666666
+      }
+   },
+   {
+      "Claim": "35% of revenue goes to states. (In Nigeria)",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.3333333333333333,
+         "False": 0.0,
+         "PantsOnFire": 0.3333333333333333
+      }
+   },
+   {
+      "Claim": "Margaret Sanger was a racist who believed in eugenics. Her goal when founding Planned Parenthood was to eradicate minorities.",
+      "Label": "Unknown",
+      "Prediction": {
+         "True": 0.5,
+         "False": 0.0,
+         "PantsOnFire": 0.5
+      }
+   },
+   {
+      "Claim": "Joe Biden voted for the Irag War and supported war in Serbia, Syria and Libya.",
+      "Label": "Unknown",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "Biden has pledged to defund the police",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "President Muhammadu Buhari sign a new Police bill to allow officers arrest without a warrant",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.6666666666666666,
+         "False": 0.3333333333333333,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "We actually saw revenues to the Treasury increase after we lowered taxes in 2017. Rest assured the Democrats do not want you to know that.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.2,
+         "False": 0.0,
+         "PantsOnFire": 0.8
+      }
+   },
+   {
+      "Claim": "In 2019 the US Police were 20.8 times more likely to kill than be killed by a criminal",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "There is a \u00ef\u00bf\u00bdglobal average\u00ef\u00bf\u00bd for the number of judges and magistrates to number of people in Kenya.",
+      "Label": "Unknown",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "In Kenya now with a population of about 48 million, there is one judge serving over 300,000 people.",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 0.6666666666666666
+      }
+   },
+   {
+      "Claim": "Kenya had a population of about 48 million with one judge serving over 300,000 people in 2019.",
+      "Label": "Unknown",
+      "Prediction": {
+         "True": 0.3333333333333333,
+         "False": 0.3333333333333333,
+         "PantsOnFire": 0.3333333333333333
+      }
+   },
+   {
+      "Claim": "Anxiety levels among young teenagers dropped during the coronavirus pandemic, a study has suggested",
+      "Label": "Unknown",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "The Kenyan judiciary does not even get 1% of the national budget.",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.6666666666666666,
+         "PantsOnFire": 0.3333333333333333
+      }
+   },
+   {
+      "Claim": "I will raise taxes for anybody making over $400,000. \u00ef\u00bf\u00bd No new taxes for people making less than $400,000.",
+      "Label": "Unknown",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "The counties are striving to reach the 10% [allocation to agriculture] recommended by the Malabo declaration.",
+      "Label": "Unknown",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "Kenya only disposes of about 300,000 cases.",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "The judiciary of Kenya have an average of 400,000 cases being filed in our courts every year.",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.3333333333333333,
+         "False": 0.6666666666666666,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "All government schools in India are being privatised.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "The current Ghana administration has resulted in a decline in unemployment rates from 11.9% in 2015 to 7.3% in 2019.",
+      "Label": "Unknown",
+      "Prediction": {
+         "True": 0.25,
+         "False": 0.0,
+         "PantsOnFire": 0.5
+      }
+   },
+   {
+      "Claim": "If one gets the Spanish flu you have a 50% chance of dying",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "Ghana's economy previously grew at 3.4% under the form President Mahama's government and on average, for three successive years, at 7% per year with the current administration.",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.4,
+         "False": 0.0,
+         "PantsOnFire": 0.6
+      }
+   },
+   {
+      "Claim": "Kenya settles  about 300,000 court cases each year.",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.0,
+         "False": 1.0,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "No Democrats have condemned the rioting that has occurred alongside recent protests.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.3333333333333333,
+         "False": 0.0,
+         "PantsOnFire": 0.3333333333333333
+      }
+   },
+   {
+      "Claim": "A pizza place in Washington, D.C. -- Comet Ping Pong has ties to Hillary Clinton and other leading Democrats",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.5,
+         "False": 0.25,
+         "PantsOnFire": 0.25
+      }
+   },
+   {
+      "Claim": "South African consume more alcohol per person on average than anywhere else in Africa.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.3333333333333333,
+         "False": 0.0,
+         "PantsOnFire": 0.6666666666666666
+      }
+   },
+   {
+      "Claim": "South Africans drink more per person than anywhere else in Africa",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.3333333333333333,
+         "False": 0.0,
+         "PantsOnFire": 0.6666666666666666
+      }
+   },
+   {
+      "Claim": "Only 31% of South African drink alcohol",
+      "Label": "Unknown",
+      "Prediction": {
+         "True": 0.0,
+         "False": 1.0,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "South Africans drink more per person than anywhere else in Africa.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.3333333333333333,
+         "PantsOnFire": 0.6666666666666666
+      }
+   },
+   {
+      "Claim": "world bank currently rates Nigeria as one of ten top performing countries on its Doing Business Index.",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.6666666666666666,
+         "False": 0.0,
+         "PantsOnFire": 0.3333333333333333
+      }
+   },
+   {
+      "Claim": "Joe Biden officiated a gay wedding at the White House in 2016.",
+      "Label": "Unknown",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "Democratic Arizona Superintendent of Public Instruction Kathy Hoffman is \u00ef\u00bf\u00bdpushing\u00ef\u00bf\u00bd for sex education that would teach kindergartners about masturbation and sexual positions.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.4,
+         "False": 0.0,
+         "PantsOnFire": 0.6
+      }
+   },
+   {
+      "Claim": "The interface of the COVID-19 Exposure Notification System, a contact tracing programme developed by Apple and Google has been secretly inserted onto phones and tracks user\u00ef\u00bf\u00bds location.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.16666666666666666,
+         "False": 0.0,
+         "PantsOnFire": 0.6666666666666666
+      }
+   },
+   {
+      "Claim": "Democratic Arizona Superintendent of Public Instruction Kathy Hoffman was sworn into office on a Dr. Seuss book.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.75,
+         "False": 0.25,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "USA is the only major industrial economy to have it unemployment rate triple.",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.6666666666666666,
+         "PantsOnFire": 0.3333333333333333
+      }
+   },
+   {
+      "Claim": "The USA has only 4% of the worlds population but has 25% of the worlds Covid-19 Cases.",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.3333333333333333,
+         "False": 0.0,
+         "PantsOnFire": 0.6666666666666666
+      }
+   },
+   {
+      "Claim": "Donald Trump is trying to take away the health care by getting rid of the Affordable Care Act.",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.6666666666666666,
+         "False": 0.0,
+         "PantsOnFire": 0.3333333333333333
+      }
+   },
+   {
+      "Claim": "Raising the US federally required minimum wage to $15 an hour would give 40 million workers a pay raise and push the wage scale up for everyone else.",
+      "Label": "Unknown",
+      "Prediction": {
+         "True": 0.4,
+         "False": 0.0,
+         "PantsOnFire": 0.6
+      }
+   },
+   {
+      "Claim": "BJP MP and former Union Minister Alphons Kannanthanam  sent his mother's dead body from Delhi to Kerala for the funeral without revealing she died of Covid-19.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.2,
+         "False": 0.2,
+         "PantsOnFire": 0.6
+      }
+   },
+   {
+      "Claim": "Drinking traditional Chinese medicine (TCM) or steroids, along with antibiotics at the onset of symptoms cures COVID-19.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "In 2016, 33 million Americans voted by mail.",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "In Michigan, US one of the three key states that enabled Donald Trump to win the presidential election in 2016, the winning margin averaged out to just over two votes per precinct.",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.6,
+         "False": 0.0,
+         "PantsOnFire": 0.2
+      }
+   },
+   {
+      "Claim": "Auto workers across Michigan could have lost their jobs if not for Barack Obama and Joe Biden",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.6666666666666666,
+         "False": 0.0,
+         "PantsOnFire": 0.3333333333333333
+      }
+   },
+   {
+      "Claim": "Nigeria is the largest producer of rice in Africa, ranking 14th in the world.",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.6666666666666666,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "There are many scientific studies saying masks should be worn only in enclosed spaces, such as in elevators and conference rooms, and not outdoors",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.6,
+         "False": 0.0,
+         "PantsOnFire": 0.2
+      }
+   },
+   {
+      "Claim": "In the US, envelopes used for mail-in ballots in general elections reveal the party affiliation of the voter allowing postal workers to toss votes.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.2,
+         "False": 0.0,
+         "PantsOnFire": 0.8
+      }
+   },
+   {
+      "Claim": "In one of the states that determined the outcome\" of the 2016 presidential race, \"the winning margin averaged out to just two votes per precinct \u2014 two votes.",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.6,
+         "False": 0.0,
+         "PantsOnFire": 0.4
+      }
+   },
+   {
+      "Claim": "Beijing government announced that Chinese people should not travel to the United States or buy American-made products.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.25,
+         "False": 0.0,
+         "PantsOnFire": 0.5
+      }
+   },
+   {
+      "Claim": "MS Dhoni has exited the cricket team for refusing to campaign for BJP in Jharkhand election.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "Walmart stores have stopped accepting cash payments.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.0,
+         "False": 1.0,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "warm water is effective in curing asthma",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "Facebook deleted a photo of Melania Trump with her sister and mother.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.3333333333333333,
+         "False": 0.0,
+         "PantsOnFire": 0.6666666666666666
+      }
+   },
+   {
+      "Claim": "UK Prime Minister Boris Johnson apologised for colonial rule in India.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.3333333333333333,
+         "False": 0.0,
+         "PantsOnFire": 0.6666666666666666
+      }
+   },
+   {
+      "Claim": "Cold water affects the internal walls of the stomach. It affects the large intestine and results in cancer",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.5,
+         "False": 0.5,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "Says Hillary Clinton has been given tens of millions of dollars by countries that \"treat women horribly ... and countries that kill gays.\"",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.5,
+         "PantsOnFire": 0.5
+      }
+   },
+   {
+      "Claim": "Says marijuana use among Colorado high school students \"has not increased since legalization.\"",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.3333333333333333,
+         "False": 0.3333333333333333,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "Says Indiana Gov. Mike Pence \"advocated diverting taxpayer dollars to so-called conversion therapy.\"",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.5,
+         "False": 0.0,
+         "PantsOnFire": 0.5
+      }
+   },
+   {
+      "Claim": "\"California is growing a hell of a lot faster than Texas.\"",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "California's Proposition 63 would \"CRIMINALIZE the sharing of ammunition between friends who may be hunting or shooting together.\"",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.25,
+         "False": 0.0,
+         "PantsOnFire": 0.75
+      }
+   },
+   {
+      "Claim": "California has \"the sixth largest economy on planet Earth.\"",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.0,
+         "False": 1.0,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "Says allegations that he made unwanted sexual advances on a female sheriff's deputy \"were found by two separate judges to not have merit.\"",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.75,
+         "False": 0.0,
+         "PantsOnFire": 0.25
+      }
+   },
+   {
+      "Claim": "The estimated price of President Trump's border wall is the same as the cost of \"one and a half aircraft carriers.\"",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.5,
+         "False": 0.0,
+         "PantsOnFire": 0.5
+      }
+   },
+   {
+      "Claim": "\"Crime has been getting worse since Jerry Brown was elected governor.\"",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.3333333333333333,
+         "False": 0.3333333333333333,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "Refugee \"vetting was very haphazard,\" under the Obama Administration. \"In many cases, we simply accepted the word of applicants.\"",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.5,
+         "False": 0.0,
+         "PantsOnFire": 0.5
+      }
+   },
+   {
+      "Claim": "\"The Oroville dam failure was entirely avoidable: California passed a $7.5 Billion water bond in 2014 but Jerry Brown didn't spend $1 on new water storage or improvements to existing infrastructure like Oroville.\"",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.3333333333333333,
+         "False": 0.0,
+         "PantsOnFire": 0.5
+      }
+   },
+   {
+      "Claim": "\"Beginning on Jan. 1, prostitution by minors will be legal in California.\"",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "California has \"the highest poverty rate in the nation\" when considering the U.S. Census Bureau's Supplemental Poverty Measure.",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.25,
+         "False": 0.5,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "Although California has \"the sixth largest economy in the world, we also have one of the highest poverty rates\" in the nation.",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.5,
+         "False": 0.0,
+         "PantsOnFire": 0.5
+      }
+   },
+   {
+      "Claim": "California is 41st in the nation in per pupil K-12 spending, but \"No. 1 in per prisoner\" spending.",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.5,
+         "False": 0.0,
+         "PantsOnFire": 0.5
+      }
+   },
+   {
+      "Claim": "Says his parents \"came to America following Fidel Castro's takeover\" of Cuba.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.3333333333333333,
+         "False": 0.0,
+         "PantsOnFire": 0.6666666666666666
+      }
+   },
+   {
+      "Claim": "Obamacare \"will provide insurance to all non-U.S. residents, even if they are here illegally.\"",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.3333333333333333,
+         "PantsOnFire": 0.6666666666666666
+      }
+   },
+   {
+      "Claim": "Says Rick Scott \"oversaw the largest Medicare fraud in the nation's history.\"",
+      "Label": "True",
+      "Prediction": {
+         "True": 1.0,
+         "False": 0.0,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "As a senator, Hillary Clinton \"has her name on three laws in eight years.\"",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.6666666666666666,
+         "False": 0.0,
+         "PantsOnFire": 0.3333333333333333
+      }
+   },
+   {
+      "Claim": "\"Whales live as long at SeaWorld\" as they do in the wild.",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.0,
+         "False": 1.0,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "\"In the states that allow open carry, violent crime was 23 percent lower.\"",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.3333333333333333,
+         "False": 0.0,
+         "PantsOnFire": 0.6666666666666666
+      }
+   },
+   {
+      "Claim": "In the 2012 election, there were more votes cast than registered voters in St. Lucie County, and Palm Beach County had 141 percent turnout.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "\"The director of the FBI said that we cannot properly vet people coming from the Middle East.\"",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.3333333333333333,
+         "False": 0.0,
+         "PantsOnFire": 0.6666666666666666
+      }
+   },
+   {
+      "Claim": "Under Hillary Clinton's plan \"illegal immigrants convicted of committing crimes get to stay.\"",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.3333333333333333,
+         "False": 0.3333333333333333,
+         "PantsOnFire": 0.3333333333333333
+      }
+   },
+   {
+      "Claim": "\"We have never done business with Donald Trump.\"",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "Says President Obama \"was proposing pinprick strikes\" for military intervention in Syria.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.6666666666666666,
+         "False": 0.0,
+         "PantsOnFire": 0.3333333333333333
+      }
+   },
+   {
+      "Claim": "\"Sen. Rubio has the worst vote attendance record of any Florida senator in nearly 50 years.\"",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.6666666666666666,
+         "False": 0.0,
+         "PantsOnFire": 0.3333333333333333
+      }
+   },
+   {
+      "Claim": "\"Not a single Democrat opposed Neil Gorsuch's confirmation in 2006.\"",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.0,
+         "False": 1.0,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "\"I have already saved more than $700 million when I got involved in the negotiation on the F-35.\"",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "\"Most of these mass shootings take place in (areas) where you're not allowed to have a concealed weapons permit.\"",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.75,
+         "False": 0.0,
+         "PantsOnFire": 0.25
+      }
+   },
+   {
+      "Claim": "Says former President Barack Obama \"took similar action against Cuban refugees\" as President Donald Trump did in his executive order.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.25,
+         "False": 0.0,
+         "PantsOnFire": 0.5
+      }
+   },
+   {
+      "Claim": "\"Elizabeth Warren doesn't think Obamacare goes far enough: The next step is single payer.' Does Sen. Nelson agree? He has in the past ... Sen. Nelson votes with Warren 90 percent of the time.\"",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.375,
+         "False": 0.375,
+         "PantsOnFire": 0.25
+      }
+   },
+   {
+      "Claim": "\"5.7 million -- that's how many illegal immigrants might have voted\" in 2008.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.3333333333333333,
+         "False": 0.0,
+         "PantsOnFire": 0.6666666666666666
+      }
+   },
+   {
+      "Claim": "\"As an undocumented immigrant, you do have constitutional rights here in the United States.\"",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.6666666666666666,
+         "False": 0.0,
+         "PantsOnFire": 0.3333333333333333
+      }
+   },
+   {
+      "Claim": "Says of the GOP health care proposal, \"pre-existing conditions are in the bill.\"",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.6666666666666666,
+         "False": 0.3333333333333333,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "Donald Trump's \"golf course on the island defaulted, like so many of his other failed business schemes. The failure left Puerto Rican taxpayers with a nearly $33 million bill.\"",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.3333333333333333,
+         "False": 0.0,
+         "PantsOnFire": 0.3333333333333333
+      }
+   },
+   {
+      "Claim": "\"We have got 20 million folks out there across this land who have told the federal government, Phooey, nonsense, I'm not going to participate in your program, because it doesn't do what I need done.' \"",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.14285714285714285,
+         "False": 0.0,
+         "PantsOnFire": 0.8571428571428571
+      }
+   },
+   {
+      "Claim": "\"Fifty seats have already changed hands from the Republicans to the Democrats since Donald Trump was elected.\"",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.25,
+         "False": 0.25,
+         "PantsOnFire": 0.5
+      }
+   },
+   {
+      "Claim": "\"Adolf Hitler confiscated all the weapons took all the weapons, had a registry of everybody and then on the night of June 30, 1934, sent out his secret police and murdered all of his political opponents.\"",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.6666666666666666,
+         "False": 0.16666666666666666,
+         "PantsOnFire": 0.16666666666666666
+      }
+   },
+   {
+      "Claim": "Says David Hogg wasn't at school during the Parkland school shooting.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.3333333333333333,
+         "False": 0.6666666666666666,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "\"How is a misogynist bigot of epic proportions (like U.S. Rep. Steven Smith) allowed to serve?\"",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.6666666666666666,
+         "False": 0.0,
+         "PantsOnFire": 0.3333333333333333
+      }
+   },
+   {
+      "Claim": "Newt Gingrich has been a proponent of selecting a president by popular vote instead of the Electoral College.",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.6666666666666666,
+         "False": 0.0,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "\"I've got five years of experience as a national security staffer in the U.S. Congress.\"",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.25,
+         "False": 0.0,
+         "PantsOnFire": 0.5
+      }
+   },
+   {
+      "Claim": "\"Nearly $2 billion in cash was flown over to Iran, money that the Obama administration has admitted is being used for terrorists and to support further activities there.\"",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.2,
+         "False": 0.2,
+         "PantsOnFire": 0.2
+      }
+   },
+   {
+      "Claim": "In the House Republican health care bill, \"we're expanding women's access to health services by redirecting Planned Parenthood dollars to community health centers, which vastly outnumber Planned Parenthood clinics.\"",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.6666666666666666,
+         "False": 0.0,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "Says under her leadership, \"Democrats fought to ... make sure the (2011 HOPE) bill ... prevented the use of ACT/SAT testing standards.\"",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.25,
+         "PantsOnFire": 0.5
+      }
+   },
+   {
+      "Claim": "Says Delta offers a discount to Planned Parenthood.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "A teenage schoolgirl in Texas became pregnant through a flu vaccination.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "A photograph from 1898 shows Julia Richardson, a tennis player who won six doubles championships.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.6666666666666666,
+         "False": 0.0,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "A black-and-white photograph shows children playing on frighteningly dangerous (by modern standards) playground equipment in a public park.",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.6,
+         "False": 0.0,
+         "PantsOnFire": 0.4
+      }
+   },
+   {
+      "Claim": "A 14 August 1912 article from a New Zealand newspaper contained a brief story about how burning coal might produce future warming by adding carbon dioxide to the atmosphere.",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.8,
+         "False": 0.0,
+         "PantsOnFire": 0.2
+      }
+   },
+   {
+      "Claim": "A 1922 New York Times article reported that Adolf Hitler \"was merely using anti-Semitic propaganda as a bait to catch masses of followers\".",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.5,
+         "False": 0.0,
+         "PantsOnFire": 0.5
+      }
+   },
+   {
+      "Claim": "Image depicts \"attitude adjustment\" and \"smile therapy\" forced upon American housewives in the 1930s institutionalized for \"not taking care of themselves\" and acting \"depressed.\"",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.4,
+         "False": 0.0,
+         "PantsOnFire": 0.6
+      }
+   },
+   {
+      "Claim": "A summary of the 1956 Republican platform describes a significant divergence from the party's focus in recent decades.",
+      "Label": "Unknown",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 0.5
+      }
+   },
+   {
+      "Claim": "A coroner had his hands full determining just that in the case of a man who jumped off a building, only to have a shotgun blast finish him off halfway down.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.4,
+         "False": 0.0,
+         "PantsOnFire": 0.6
+      }
+   },
+   {
+      "Claim": "Donald Trump said in 1998 that he would one day run as a Republican because they are the \"dumbest group of voters.\"",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.25,
+         "False": 0.0,
+         "PantsOnFire": 0.75
+      }
+   },
+   {
+      "Claim": "An NPR study determined that 25 million fraudulent votes had been cast for Hillary Clinton in the 2016 presidential election.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.5,
+         "False": 0.0,
+         "PantsOnFire": 0.5
+      }
+   },
+   {
+      "Claim": "30,000 scientists have signed a petition arguing that there is no convincing scientific evidence for anthropogenic climate change.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.5,
+         "False": 0.25,
+         "PantsOnFire": 0.25
+      }
+   },
+   {
+      "Claim": "Donald Trump won the state of Wisconsin by 27,000 votes, but 300,000 Wisconsin voters were turned away at the polls for insufficient identification.",
+      "Label": "Unknown",
+      "Prediction": {
+         "True": 0.4,
+         "False": 0.4,
+         "PantsOnFire": 0.2
+      }
+   },
+   {
+      "Claim": "A government report from 2008 states that 35,000 veterans of the first Gulf War died as a direct result of adverse effects from an Anthrax vaccine they were mandated to receive.",
+      "Label": "Unknown",
+      "Prediction": {
+         "True": 0.2,
+         "False": 0.4,
+         "PantsOnFire": 0.4
+      }
+   },
+   {
+      "Claim": "A biotech company has developed a 3D synthetic rhino horn that will eventually undercut the market for poached horns.",
+      "Label": "Unknown",
+      "Prediction": {
+         "True": 0.75,
+         "False": 0.0,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "An anonymous 4chan user predicted the October 2017 Las Vegas Strip mass shooting.",
+      "Label": "Unknown",
+      "Prediction": {
+         "True": 0.3333333333333333,
+         "False": 0.0,
+         "PantsOnFire": 0.6666666666666666
+      }
+   },
+   {
+      "Claim": "A Tennessee boy died in the arms of a local man portraying Santa Claus during a hospital visit.",
+      "Label": "Unknown",
+      "Prediction": {
+         "True": 1.0,
+         "False": 0.0,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "643,000 Americans declare bankruptcy over medical bills every year.",
+      "Label": "Unknown",
+      "Prediction": {
+         "True": 1.0,
+         "False": 0.0,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "The damage to the Pentagon on September 11 was caused by something other than a hijacked Boeing 757's being crashed into its side.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.5,
+         "False": 0.25,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "A nineteenth-century British man named Edward Mordrake (also spelled \"Mordake\") was born with a rare medical condition in the form of a extra face on the back of his head.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.2,
+         "False": 0.0,
+         "PantsOnFire": 0.6
+      }
+   },
+   {
+      "Claim": "Photograph shows John F. Kennedy and Marilyn Monroe sharing an intimate moment.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.3333333333333333,
+         "False": 0.0,
+         "PantsOnFire": 0.6666666666666666
+      }
+   },
+   {
+      "Claim": "Photographs show the figure of an astronaut carved into the wall of a 12th century Spanish cathedral.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "The numbers on a toaster indicate duration of toasting in minutes, and not a \"degree of toastiness.\"",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.75,
+         "False": 0.0,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "A live poll conducted by ABC News in August 2016 shows Donald Trump, Jill Stein, and Gary Johnson all well ahead of Hillary Clinton.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.5,
+         "False": 0.0,
+         "PantsOnFire": 0.5
+      }
+   },
+   {
+      "Claim": "Abortion rates drop during Democratic presidencies and rise during Republican administrations.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.6666666666666666,
+         "PantsOnFire": 0.3333333333333333
+      }
+   },
+   {
+      "Claim": "Abraham Lincoln issued a prophetic warning about the tyranny of capitalism.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.6666666666666666,
+         "False": 0.0,
+         "PantsOnFire": 0.3333333333333333
+      }
+   },
+   {
+      "Claim": "Ace Hardware is refusing to sell propane to Dakota Access pipeline protesters.",
+      "Label": "Unknown",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "Penn State's Joe Paterno said \"when you get into the end zone, act like you've been there before.\"",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.3333333333333333,
+         "False": 0.0,
+         "PantsOnFire": 0.6666666666666666
+      }
+   },
+   {
+      "Claim": "Actor Harry Shearer announced in November 2017 that he was leaving 'The Simpsons.'",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.3333333333333333,
+         "PantsOnFire": 0.6666666666666666
+      }
+   },
+   {
+      "Claim": "Adam Schiff's sister Melissa was married to George Soros's son, Robert.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.3333333333333333,
+         "False": 0.3333333333333333,
+         "PantsOnFire": 0.3333333333333333
+      }
+   },
+   {
+      "Claim": "Al Gore's residence uses considerably more energy than the average American home.",
+      "Label": "Unknown",
+      "Prediction": {
+         "True": 0.6666666666666666,
+         "False": 0.0,
+         "PantsOnFire": 0.3333333333333333
+      }
+   },
+   {
+      "Claim": "An image shows Maria Bartiromo holding a phone decorated with a \"Trump/Pence\" sticker at the annual Al Smith Dinner.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.5,
+         "False": 0.0,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "Buzz Aldrin said that his greatest achievement was successfully restraining himself from punching President Trump.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "Alexandria shooter James Hodgkinson protested with a sign featuring a Rand Paul tweet.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.6666666666666666,
+         "False": 0.0,
+         "PantsOnFire": 0.3333333333333333
+      }
+   },
+   {
+      "Claim": "Former Miss Universe Alicia Machado was a 'porn star.'",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "A corpse found in Nazca, Peru, is that of an alien.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "Actress Allison Mack confessed that she sold children to the Rothschilds and Clintons.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "Amazon employees \"earn so little they qualify for food stamps.\"",
+      "Label": "Unknown",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 0.0
+      }
+   },
+   {
+      "Claim": "A black woman named Amelia Bassano has been proved the true (uncredited) author of all of William Shakespeare's plays.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.5,
+         "False": 0.0,
+         "PantsOnFire": 0.5
+      }
+   },
+   {
+      "Claim": "President Trump's oft-repeated slogan \"America First\" was also a credo of the white supremacist Ku Klux Klan organization.",
+      "Label": "True",
+      "Prediction": {
+         "True": 0.75,
+         "False": 0.0,
+         "PantsOnFire": 0.25
+      }
+   },
+   {
+      "Claim": "The American Psychiatric Association condones pedophilia and says it is normal to be sexually attracted to children.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.25,
+         "False": 0.0,
+         "PantsOnFire": 0.75
+      }
+   },
+   {
+      "Claim": "The Amish Brotherhood have endorsed Donald Trump for president.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "A photograph shows Amy Winehouse and Lana Del Rey hanging out together.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.0,
+         "False": 0.0,
+         "PantsOnFire": 1.0
+      }
+   },
+   {
+      "Claim": "Ted Cruz was unable to locate the clitoris on a diagram of the female anatomy.",
+      "Label": "False",
+      "Prediction": {
+         "True": 0.6666666666666666,
+         "False": 0.0,
+         "PantsOnFire": 0.3333333333333333
+      }
+   }
+]

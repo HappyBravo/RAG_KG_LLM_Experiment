@@ -1,6 +1,6 @@
 # IMPORTS
 
-import requests, re
+import requests, re, time
 
 from bs4 import BeautifulSoup
 from googlesearch import search
@@ -10,13 +10,19 @@ from googletrans import Translator
 # from joblib import Parallel, delayed
 from tqdm import tqdm
 
+SLEEP_INTERVAL = 5
+
 # import httpcore
 # setattr(httpcore, 'SyncHTTPTransport', 'AsyncHTTPProxy')
 
 class GoogleUtil():
     def __init__(self):
         # self.translator = Translator()
-        pass
+        # pass
+        self.googlenews = GoogleNews()
+        self.googlenews.set_encode("utf-8")
+        self.googlenews.set_lang("en")
+
 
     def clean_spaces_text(self, text):
         # Replace multiple spaces, tabs, and newline characters with a single space
@@ -25,7 +31,8 @@ class GoogleUtil():
 
     def _search_google(self, query, number_of_results):
         urls = []
-        for url in search(query, num_results=number_of_results):
+        for url in search(query, num_results=number_of_results, 
+                          sleep_interval = SLEEP_INTERVAL):
             urls.append(url)
         return urls
     
@@ -78,19 +85,21 @@ class GoogleUtil():
                             period = "",           # PAST DAYS
                             useGoogle = True):          
         news_urls = []
-        googlenews = GoogleNews()
+        # googlenews = GoogleNews()
         
         # FILTERS AND PARAMETERS
-        googlenews.set_lang("en")
-        googlenews.set_period(period)
-        googlenews.set_encode("utf-8")
+        # self.googlenews.set_lang("en")
+        # self.googlenews.set_period(period)
+        # self.googlenews.set_encode("utf-8")
+
+        self.googlenews.set_period(period)
 
         if useGoogle:
-            googlenews.search(query)
+            self.googlenews.search(query)
         else:
-            googlenews.get_news(query)
+            self.googlenews.get_news(query)
 
-        results = googlenews.results()
+        results = self.googlenews.results()
         # print(googlenews.get_links())
 
         # input()
@@ -101,7 +110,7 @@ class GoogleUtil():
             if "https://" not in _link[:10]:
                 _link = "https://"+_link 
             news_urls.append(_link)
-        googlenews.clear()
+        self.googlenews.clear()
         return news_urls
     
     def search_google_news(self, query, number_of_results = 5, period = "", englishOnly = True, useGoogle = True):
@@ -172,6 +181,7 @@ class GoogleUtil():
                 search_dict.update(self.search_google(_ele, number_of_results = number_of_results))
                 news_dict.update(self.search_google_news(_ele, number_of_results=number_of_results, useGoogle=useGoogleForNews))
                 # print(" "*(5 + len(_ele)), end = "\r")
+                time.sleep(SLEEP_INTERVAL)
             print()
         return search_dict, news_dict
 

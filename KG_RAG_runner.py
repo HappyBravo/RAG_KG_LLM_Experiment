@@ -35,6 +35,15 @@ from checkInternetConn import is_connected
 from mylogger import Logger
 
 log_folder = "./Logs/"
+if not os.path.exists(log_folder):
+    os.makedirs(log_folder)
+    print(f"{log_folder} - log folder created...")
+
+results_folder = "./results/"
+if not os.path.exists(results_folder):
+    os.makedirs(results_folder)
+    print(f"{log_folder} - results folder created...")
+
 time_during_start = datetime.now().strftime('%Y%m%d_%H%M%S')
 log_filename = log_folder + f"log_{time_during_start}.txt"
 logger = Logger(log_file=log_filename)
@@ -178,12 +187,28 @@ if __name__ == "__main__":
     # --------------------------------------------------------------------------
 
     # testing_file = "./data/averitec_claims.csv"
-    testing_file = "./data/politifact_claims.csv"
-    # testing_file = "./data/snopes_claims.csv"
+    # testing_file = "./data/politifact_claims.csv"
+    testing_file = "./data/snopes_claims.csv"
     
     assert os.path.exists(testing_file)
 
     testing_df = pd.read_csv(testing_file)
+
+    # _input_statement = input("Enter the news to check : ").strip()
+#     _input_statement = ["""
+# New report claims India's rise on world stage under PM Modi is 'a mirage'. It claims that in both the US and UK, Modi is neither well known nor popular, and refers to a recent YouGov poll in
+# which he was ranked in both countries below the highly disliked figures in those countries of Vladimir Putin and Xi Jinping. In UK just 10% view Modi favourably, the poll, based on a sample of adults, claims.
+# It cites another poll from YouGov that found 80% of Indians are concerned for the health of their democracy. It blames a lack of press freedom in India as the reason for the mirage and calls on India to change course toward greater respect for human rights and democratic norms.
+# The report claims that 52% of British Indians don't like Modi, based on polling by GQR, and that 65% of British Indians rate religious violence allegedly promoted by Modi spilling over to the UK as a top concern.
+# The report also claims the majority of people in the US, UK and France are concerned about the state of human rights and democracy in India, alleged attempts by India to assassinate US and Canadian citizens on home soil, and new laws which make it harder for Muslims to become citizens of India, and says they want to see human rights as conditions of trade deals.
+
+# "State machinery is being used to oppress the opposition...while BJP leaders enjoy total impunity," it claims.
+# # """.replace('\n', ' ')]
+#     _label = [""]
+#     _testing_df = {"Claim" : _input_statement,
+#                   "Label_mapped" : _label}
+    
+#     testing_df = pd.DataFrame(_testing_df)
 
     claim_label_tuples = [(claim, label) for claim, label in zip(testing_df["Claim"], testing_df["Label_mapped"])]
     
@@ -195,7 +220,7 @@ if __name__ == "__main__":
     n_claims_start = int(input("Enter starting : "))
     n_claims_end = int(input(f"Enter ending (after {n_claims_start + 1} and under {len(claim_label_tuples)}) : "))
 
-    resulting_file = f"./results/result_{time_during_start}.csv"
+    resulting_file = results_folder + f"result_{time_during_start}.csv"
     with open(resulting_file, "a") as result_f:
         result_f.write("Claim,Label_mapped,Result\n")
     _result = {}

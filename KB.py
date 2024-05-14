@@ -9,7 +9,7 @@ from pyvis.network import Network
 import networkx as nx
 
 
-N_JOB_COUNT = 1
+N_JOB_COUNT = 4
 
 class KB():
     def __init__(self):

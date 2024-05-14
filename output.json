@@ -1,0 +1,326 @@
+[
+    {
+        "Claim": "Hunter Biden had no experience in Ukraine or in the energy sector when he joined the board of Burisma.",
+        "Label": "True",
+        "Prediction": {
+            "True": 0.3333333333333333,
+            "False": 0.3333333333333333,
+            "PantsOnFire": 0.3333333333333333
+        }
+    },
+    {
+        "Claim": "In Nigeria \u00ef\u00bf\u00bd in terms of revenue share, 20% goes to the local government.",
+        "Label": "True",
+        "Prediction": {
+            "True": 0.0,
+            "False": 0.3333333333333333,
+            "PantsOnFire": 0.6666666666666666
+        }
+    },
+    {
+        "Claim": "Biden has pledged to stop border wall construction and give amnesty and health care to all illegal immigrants.",
+        "Label": "True",
+        "Prediction": {
+            "True": 0.5,
+            "False": 0.0,
+            "PantsOnFire": 0.5
+        }
+    },
+    {
+        "Claim": "After the police shooting of Jacob Blake, Gov. Tony Evers & Lt. Gov. Mandela Barnes did not call for peace or encourage calm.",
+        "Label": "False",
+        "Prediction": {
+            "True": 0.3333333333333333,
+            "False": 0.0,
+            "PantsOnFire": 0.3333333333333333
+        }
+    },
+    {
+        "Claim": "The Common Law Admission Test (CLAT) 2020 will not be conducted on September 7, 2020, as planned",
+        "Label": "False",
+        "Prediction": {
+            "True": 0.0,
+            "False": 0.3333333333333333,
+            "PantsOnFire": 0.6666666666666666
+        }
+    },
+    {
+        "Claim": "35% of revenue goes to states. (In Nigeria)",
+        "Label": "False",
+        "Prediction": {
+            "True": 0.3333333333333333,
+            "False": 0.0,
+            "PantsOnFire": 0.3333333333333333
+        }
+    },
+    {
+        "Claim": "Margaret Sanger was a racist who believed in eugenics. Her goal when founding Planned Parenthood was to eradicate minorities.",
+        "Label": "Unknown",
+        "Prediction": {
+            "True": 0.5,
+            "False": 0.0,
+            "PantsOnFire": 0.5
+        }
+    },
+    {
+        "Claim": "Joe Biden voted for the Irag War and supported war in Serbia, Syria and Libya.",
+        "Label": "Unknown",
+        "Prediction": {
+            "True": 0.0,
+            "False": 0.0,
+            "PantsOnFire": 1.0
+        }
+    },
+    {
+        "Claim": "Biden has pledged to defund the police",
+        "Label": "False",
+        "Prediction": {
+            "True": 0.0,
+            "False": 0.0,
+            "PantsOnFire": 1.0
+        }
+    },
+    {
+        "Claim": "President Muhammadu Buhari sign a new Police bill to allow officers arrest without a warrant",
+        "Label": "True",
+        "Prediction": {
+            "True": 0.6666666666666666,
+            "False": 0.3333333333333333,
+            "PantsOnFire": 0.0
+        }
+    },
+    {
+        "Claim": "We actually saw revenues to the Treasury increase after we lowered taxes in 2017. Rest assured the Democrats do not want you to know that.",
+        "Label": "False",
+        "Prediction": {
+            "True": 0.2,
+            "False": 0.0,
+            "PantsOnFire": 0.8
+        }
+    },
+    {
+        "Claim": "In 2019 the US Police were 20.8 times more likely to kill than be killed by a criminal",
+        "Label": "True",
+        "Prediction": {
+            "True": 0.0,
+            "False": 0.0,
+            "PantsOnFire": 1.0
+        }
+    },
+    {
+        "Claim": "There is a \u00ef\u00bf\u00bdglobal average\u00ef\u00bf\u00bd for the number of judges and magistrates to number of people in Kenya.",
+        "Label": "Unknown",
+        "Prediction": {
+            "True": 0.0,
+            "False": 0.0,
+            "PantsOnFire": 1.0
+        }
+    },
+    {
+        "Claim": "In Kenya now with a population of about 48 million, there is one judge serving over 300,000 people.",
+        "Label": "True",
+        "Prediction": {
+            "True": 0.0,
+            "False": 0.0,
+            "PantsOnFire": 0.6666666666666666
+        }
+    },
+    {
+        "Claim": "Kenya had a population of about 48 million with one judge serving over 300,000 people in 2019.",
+        "Label": "Unknown",
+        "Prediction": {
+            "True": 0.3333333333333333,
+            "False": 0.3333333333333333,
+            "PantsOnFire": 0.3333333333333333
+        }
+    },
+    {
+        "Claim": "Anxiety levels among young teenagers dropped during the coronavirus pandemic, a study has suggested",
+        "Label": "Unknown",
+        "Prediction": {
+            "True": 0.0,
+            "False": 0.0,
+            "PantsOnFire": 1.0
+        }
+    },
+    {
+        "Claim": "The Kenyan judiciary does not even get 1% of the national budget.",
+        "Label": "True",
+        "Prediction": {
+            "True": 0.0,
+            "False": 0.6666666666666666,
+            "PantsOnFire": 0.3333333333333333
+        }
+    },
+    {
+        "Claim": "I will raise taxes for anybody making over $400,000. \u00ef\u00bf\u00bd No new taxes for people making less than $400,000.",
+        "Label": "Unknown",
+        "Prediction": {
+            "True": 0.0,
+            "False": 0.0,
+            "PantsOnFire": 1.0
+        }
+    },
+    {
+        "Claim": "The counties are striving to reach the 10% [allocation to agriculture] recommended by the Malabo declaration.",
+        "Label": "Unknown",
+        "Prediction": {
+            "True": 0.0,
+            "False": 0.0,
+            "PantsOnFire": 1.0
+        }
+    },
+    {
+        "Claim": "Kenya only disposes of about 300,000 cases.",
+        "Label": "True",
+        "Prediction": {
+            "True": 0.0,
+            "False": 0.0,
+            "PantsOnFire": 1.0
+        }
+    },
+    {
+        "Claim": "The judiciary of Kenya have an average of 400,000 cases being filed in our courts every year.",
+        "Label": "True",
+        "Prediction": {
+            "True": 0.3333333333333333,
+            "False": 0.6666666666666666,
+            "PantsOnFire": 0.0
+        }
+    },
+    {
+        "Claim": "All government schools in India are being privatised.",
+        "Label": "False",
+        "Prediction": {
+            "True": 0.0,
+            "False": 0.0,
+            "PantsOnFire": 1.0
+        }
+    },
+    {
+        "Claim": "The current Ghana administration has resulted in a decline in unemployment rates from 11.9% in 2015 to 7.3% in 2019.",
+        "Label": "Unknown",
+        "Prediction": {
+            "True": 0.25,
+            "False": 0.0,
+            "PantsOnFire": 0.5
+        }
+    },
+    {
+        "Claim": "If one gets the Spanish flu you have a 50% chance of dying",
+        "Label": "False",
+        "Prediction": {
+            "True": 0.0,
+            "False": 0.0,
+            "PantsOnFire": 1.0
+        }
+    },
+    {
+        "Claim": "Ghana's economy previously grew at 3.4% under the form President Mahama's government and on average, for three successive years, at 7% per year with the current administration.",
+        "Label": "True",
+        "Prediction": {
+            "True": 0.4,
+            "False": 0.0,
+            "PantsOnFire": 0.6
+        }
+    },
+    {
+        "Claim": "Kenya settles  about 300,000 court cases each year.",
+        "Label": "True",
+        "Prediction": {
+            "True": 0.0,
+            "False": 1.0,
+            "PantsOnFire": 0.0
+        }
+    },
+    {
+        "Claim": "No Democrats have condemned the rioting that has occurred alongside recent protests.",
+        "Label": "False",
+        "Prediction": {
+            "True": 0.3333333333333333,
+            "False": 0.0,
+            "PantsOnFire": 0.3333333333333333
+        }
+    },
+    {
+        "Claim": "A pizza place in Washington, D.C. -- Comet Ping Pong has ties to Hillary Clinton and other leading Democrats",
+        "Label": "False",
+        "Prediction": {
+            "True": 0.5,
+            "False": 0.25,
+            "PantsOnFire": 0.25
+        }
+    },
+    {
+        "Claim": "South African consume more alcohol per person on average than anywhere else in Africa.",
+        "Label": "False",
+        "Prediction": {
+            "True": 0.3333333333333333,
+            "False": 0.0,
+            "PantsOnFire": 0.6666666666666666
+        }
+    },
+    {
+        "Claim": "South Africans drink more per person than anywhere else in Africa",
+        "Label": "False",
+        "Prediction": {
+            "True": 0.3333333333333333,
+            "False": 0.0,
+            "PantsOnFire": 0.6666666666666666
+        }
+    },
+    {
+        "Claim": "Only 31% of South African drink alcohol",
+        "Label": "Unknown",
+        "Prediction": {
+            "True": 0.0,
+            "False": 1.0,
+            "PantsOnFire": 0.0
+        }
+    },
+    {
+        "Claim": "South Africans drink more per person than anywhere else in Africa.",
+        "Label": "False",
+        "Prediction": {
+            "True": 0.0,
+            "False": 0.3333333333333333,
+            "PantsOnFire": 0.6666666666666666
+        }
+    },
+    {
+        "Claim": "world bank currently rates Nigeria as one of ten top performing countries on its Doing Business Index.",
+        "Label": "True",
+        "Prediction": {
+            "True": 0.6666666666666666,
+            "False": 0.0,
+            "PantsOnFire": 0.3333333333333333
+        }
+    },
+    {
+        "Claim": "Joe Biden officiated a gay wedding at the White House in 2016.",
+        "Label": "Unknown",
+        "Prediction": {
+            "True": 0.0,
+            "False": 0.0,
+            "PantsOnFire": 1.0
+        }
+    },
+    {
+        "Claim": "Democratic Arizona Superintendent of Public Instruction Kathy Hoffman is \u00ef\u00bf\u00bdpushing\u00ef\u00bf\u00bd for sex education that would teach kindergartners about masturbation and sexual positions.",
+        "Label": "False",
+        "Prediction": {
+            "True": 0.4,
+            "False": 0.0,
+            "PantsOnFire": 0.6
+        }
+    },
+    {
+        "Claim": "The interface of the COVID-19 Exposure Notification System, a contact tracing programme developed by Apple and Google has been secretly inserted onto phones and tracks user\u00ef\u00bf\u00bds location.",
+        "Label": "False",
+        "Prediction": {
+            "True": 0.16666666666666666,
+            "False": 0.0,
+            "PantsOnFire": 0.6666666666666666
+        }
+    }
+]
